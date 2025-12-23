@@ -1,0 +1,41 @@
+### GET all products
+GET http://localhost:3000/products
+
+###
+
+POST http://localhost:3000/products/
+Content-Type: application/json
+
+{
+  "nome": "Headset",
+  "price": 900
+}
+
+###
+
+PUT http://localhost:3000/products/
+Content-Type: application/json
+
+{
+  "nome": "Mouse Gamer",
+  "price": 120
+}
+
+###
+
+DELETE http://localhost:3000/products/1
+
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "username": "daison",
+  "password": "123456"
+}
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "username": "daison",
+  "password": "123456"
+}
