@@ -6,9 +6,15 @@ function App() {
       <button type="button">Adicionar</button>
 
       <ul>
-        <li>Memoria RAM</li>
-        <li>Placa de Video</li>
-        <li>Headset</li>
+        <li>
+          Produto 1 <button>Remover</button>
+        </li>
+        <li>
+          Produto 2 <button>Remover</button>
+        </li>
+        <li>
+          Produto 3 <button>Remover</button>
+        </li>
       </ul>
     </>
   );
