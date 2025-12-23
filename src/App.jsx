@@ -2,11 +2,7 @@ import ItemLista from "./ItemLista";
 import { useState } from "react";
 
 function App() {
-  const [listaMercado, setListaMercado] = useState([
-    "Arroz",
-    "Feijão",
-    "Macarrão",
-  ]);
+  const [listaMercado, setListaMercado] = useState([]);
 
   const adicionarElementoNaLista = () => {
     const novaLista = [...listaMercado];
@@ -22,11 +18,15 @@ function App() {
       <button onClick={() => adicionarElementoNaLista()} type="button">
         Adicionar
       </button>
-      <ul>
-        {listaMercado.map((itemLista, index) => (
-          <ItemLista key={index} itemLista={itemLista} />
-        ))}
-      </ul>
+      {listaMercado.length > 0 ? (
+        <ul>
+          {listaMercado.map((itemLista, index) => (
+            <ItemLista key={index} itemLista={itemLista} />
+          ))}
+        </ul>
+      ) : (
+        <p>Nenhum item na lista</p>
+      )}
     </>
   );
 }
