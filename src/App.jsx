@@ -7,13 +7,16 @@ function App() {
 
       <ul>
         <li>
-          Produto 1 <button>Remover</button>
+          <P>Produto 1</P>
+          <button>Remover</button>
         </li>
         <li>
-          Produto 2 <button>Remover</button>
+          <P>Produto 2</P>
+          <button>Remover</button>
         </li>
         <li>
-          Produto 3 <button>Remover</button>
+          <P>Produto 3</P>
+          <button>Remover</button>
         </li>
       </ul>
     </>
