@@ -1,16 +1,17 @@
 import ItemLista from "./ItemLista";
 
+const listaMercado = ["Arroz", "Feijão", "Macarrão"];
+
 function App() {
   return (
     <>
       <h1>Lista de Compras</h1>
-      <input type="text" />
+      <input type="text" placeholder="Digite um item" />
       <button type="button">Adicionar</button>
-
       <ul>
-        <ItemLista />
-        <ItemLista />
-        <ItemLista />
+        {listaMercado.map((itemLista, index) => (
+          <ItemLista key={index} itemLista={itemLista} />
+        ))}
       </ul>
     </>
   );
