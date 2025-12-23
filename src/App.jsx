@@ -1,3 +1,5 @@
+import ItemLista from "./ItemLista";
+
 function App() {
   return (
     <>
@@ -6,18 +8,9 @@ function App() {
       <button type="button">Adicionar</button>
 
       <ul>
-        <li>
-          <p>Produto 1</p>
-          <button>Remover</button>
-        </li>
-        <li>
-          <p>Produto 2</p>
-          <button>Remover</button>
-        </li>
-        <li>
-          <p>Produto 3</p>
-          <button>Remover</button>
-        </li>
+        <ItemLista />
+        <ItemLista />
+        <ItemLista />
       </ul>
     </>
   );
