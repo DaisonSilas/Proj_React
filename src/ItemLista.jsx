@@ -1,9 +1,9 @@
 import React from "react";
 
-const ItemLista = (props) => {
+const ItemLista = ({ itemLista }) => {
   return (
     <li>
-      <p>{props.itemLista}</p>
+      <p>{itemLista}</p>
       <button>Remover</button>
     </li>
   );
