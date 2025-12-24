@@ -1,23 +1,24 @@
 import ItemLista from "./ItemLista";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function App() {
-  const [listaMercado, setListaMercado] = useState([
-    "Arroz",
-    "Feijão",
-    "Macarrão",
-  ]);
+  const inputAdicionar = useRef();
+
+  const [listaMercado, setListaMercado] = useState([]);
   const adicionarElementoNaLista = () => {
     const novaLista = [...listaMercado];
-    novaLista.push("Novo Item");
-    console.log(novaLista);
+    const valorInput = inputAdicionar.current.value;
+
+    novaLista.push(valorInput);
     setListaMercado(novaLista);
+
+    inputAdicionar.current.value = "";
   };
 
   return (
     <>
       <h1>Lista de Compras</h1>
-      <input type="text" placeholder="Digite um item" />
+      <input ref={inputAdicionar} type="text" placeholder="Digite um item" />
       <button onClick={() => adicionarElementoNaLista()} type="button">
         Adicionar
       </button>
