@@ -2,8 +2,11 @@ import ItemLista from "./ItemLista";
 import { useState } from "react";
 
 function App() {
-  const [listaMercado, setListaMercado] = useState([]);
-
+  const [listaMercado, setListaMercado] = useState([
+    "Arroz",
+    "Feijão",
+    "Macarrão",
+  ]);
   const adicionarElementoNaLista = () => {
     const novaLista = [...listaMercado];
     novaLista.push("Novo Item");
@@ -21,7 +24,12 @@ function App() {
       {listaMercado.length > 0 ? (
         <ul>
           {listaMercado.map((itemLista, index) => (
-            <ItemLista key={index} itemLista={itemLista} />
+            <ItemLista
+              key={index}
+              itemLista={itemLista}
+              listaMercado={listaMercado}
+              setListaMercado={setListaMercado}
+            />
           ))}
         </ul>
       ) : (
