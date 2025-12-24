@@ -9,10 +9,12 @@ function App() {
     const novaLista = [...listaMercado];
     const valorInput = inputAdicionar.current.value;
 
-    novaLista.push(valorInput);
-    setListaMercado(novaLista);
+    if (valorInput) {
+      novaLista.push(valorInput);
+      setListaMercado(novaLista);
 
-    inputAdicionar.current.value = "";
+      inputAdicionar.current.value = "";
+    }
   };
 
   return (
